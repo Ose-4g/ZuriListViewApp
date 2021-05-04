@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.ose4g.zurilistviewapp.Constants
+import com.ose4g.zurilistviewapp.activities.DetailActivity
 import com.ose4g.zurilistviewapp.databinding.FactsItemBinding
 import com.ose4g.zurilistviewapp.models.FactModel
 
@@ -21,12 +22,14 @@ class FactAdapter (val aContext:Context, val facts:List<FactModel> ):ArrayAdapte
         {
             view = binding.root
         }
+
         binding.imageView.setImageResource(fact!!.logo)
         binding.textView.text = fact.name
         binding.cardView.setOnClickListener {
-            val intent = Intent()
+            val intent = Intent(aContext,DetailActivity::class.java)
             intent.putExtra(Constants.LOGO,fact.logo)
             intent.putExtra(Constants.DETAIL, fact.fact)
+            intent.putExtra(Constants.NAME, fact.name)
             aContext.startActivity(intent)
         }
 

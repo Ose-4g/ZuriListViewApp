@@ -17,5 +17,6 @@ class DetailActivity : AppCompatActivity() {
 
         val logo = intent.getIntExtra(Constants.LOGO,0)
         val detail = intent.getStringExtra(Constants.DETAIL)
+        title = intent.getStringExtra(Constants.NAME)
     }
 }
