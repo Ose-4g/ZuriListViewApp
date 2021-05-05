@@ -3,14 +3,13 @@ package com.ose4g.zurilistviewapp.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.android.material.textfield.TextInputLayout
 import com.ose4g.zurilistviewapp.R
 import com.ose4g.zurilistviewapp.databinding.ActivityMainBinding
 
 
 
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
 
@@ -46,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         //logs in if both condtions are met
         if(condition1 && condition2) {
-            startActivity(Intent(this@MainActivity, ListViewActivity::class.java))
+            startActivity(Intent(this@LoginActivity, ListViewActivity::class.java))
             finish()
         }
         //shows error message otherwise
