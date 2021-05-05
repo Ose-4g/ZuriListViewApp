@@ -21,6 +21,7 @@ class ListViewActivity : AppCompatActivity() {
 
         binding.listView.let {
             it.adapter = FactAdapter(this@ListViewActivity, DummyData.funFacts)
+            it.divider = getDrawable(android.R.color.transparent)
         }
 
 

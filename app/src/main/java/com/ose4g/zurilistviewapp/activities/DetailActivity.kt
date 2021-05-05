@@ -15,8 +15,11 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val logo = intent.getIntExtra(Constants.LOGO,0)
-        val detail = intent.getStringExtra(Constants.DETAIL)
+        binding.logo.setImageResource( intent.getIntExtra(Constants.LOGO,0))
+        binding.fact.text = intent.getStringExtra(Constants.DETAIL)
         title = intent.getStringExtra(Constants.NAME)
+
+
+
     }
 }

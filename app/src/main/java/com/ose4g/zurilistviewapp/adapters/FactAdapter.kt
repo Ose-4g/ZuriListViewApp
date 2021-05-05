@@ -23,8 +23,8 @@ class FactAdapter (val aContext:Context, val facts:List<FactModel> ):ArrayAdapte
             view = binding.root
         }
 
-        binding.imageView.setImageResource(fact!!.logo)
-        binding.textView.text = fact.name
+        binding.logo.setImageResource(fact!!.logo)
+        binding.name.text = fact.name
         binding.cardView.setOnClickListener {
             val intent = Intent(aContext,DetailActivity::class.java)
             intent.putExtra(Constants.LOGO,fact.logo)
