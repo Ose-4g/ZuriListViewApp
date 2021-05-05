@@ -23,6 +23,7 @@ class FactAdapter (val aContext:Context, val facts:List<FactModel> ):ArrayAdapte
             view = binding.root
         }
 
+        //sets the required values in the views using view binding.
         binding.logo.setImageResource(fact!!.logo)
         binding.name.text = fact.name
         binding.cardView.setOnClickListener {
@@ -35,7 +36,5 @@ class FactAdapter (val aContext:Context, val facts:List<FactModel> ):ArrayAdapte
 
         return view
 
-
-        return super.getView(position, convertView, parent)
     }
 }
