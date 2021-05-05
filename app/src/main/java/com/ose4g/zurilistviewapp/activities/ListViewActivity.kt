@@ -19,17 +19,11 @@ class ListViewActivity : AppCompatActivity() {
         binding = ActivityListViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //binding the listview to the adapter
         binding.listView.let {
             it.adapter = FactAdapter(this@ListViewActivity, DummyData.funFacts)
-            it.divider = getDrawable(android.R.color.transparent)
+            it.divider = null
         }
 
-
-
-    }
-
-    override fun onDestroy() {
-        binding 
-        super.onDestroy()
     }
 }
