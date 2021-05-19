@@ -4,19 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ose4g.zurilistviewapp.R
-import com.ose4g.zurilistviewapp.databinding.ActivityMainBinding
+import com.ose4g.zurilistviewapp.databinding.ActivityLoginBinding
 
 
 
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
